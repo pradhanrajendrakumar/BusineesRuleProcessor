@@ -27,7 +27,7 @@ namespace BusinessRuleEngine.Services
                     orderProcessor = new MembershipOrderProcessor(new UpgradeMembership(new EmailProvider()));
                     break;
                 case ProductType.Video:
-                    orderProcessor = new VideoOrderProcessor();
+                    orderProcessor = new VideoOrderProcessor(new PackingSlipGenerator());
                     break;
                 default:
                     break;
